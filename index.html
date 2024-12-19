@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Lucas Alencar</title>
+  <!-- Link para AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Link para o CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Link para Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <nav>
+      <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="theme-toggle">
+        <i class="fas fa-sun"></i>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Seção Hero atualizada -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <p class="subtitle">Hello, My Name Is</p>
+      <h1>Lucas Alencar</h1>
+      <p class="description">Desenvolvedor mobile</p>
+      <div class="hero-buttons">
+        <a href="#projetos" class="btn">Meus Projetos</a>
+        <a href="#contato" class="btn btn-outline">Contato</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="sda.jpg" alt="Profile" class="profile-image">
+    </div>
+  </section>
+
+  <!-- Seção Sobre com Cards de Serviços -->
+  <section id="sobre" class="sobre-services">
+    <div class="sobre-container">
+      <div class="profile-section">
+        <img src="sda.jpg" alt="Minha foto" class="about-image">
+      </div>
+      
+      <div class="skills-section">
+        <h2>Sobre Mim</h2>
+        <p>Oi, eu sou desenvolvedor mobile e trabalho com Java, especialmente criando apps para Android. Gosto de transformar ideias em aplicativos que as pessoas realmente usam no dia a dia. É muito gratificante saber que algo que eu criei pode facilitar a vida de alguém ou até mesmo trazer diversão.</p>
+        <p>Tenho experiência em todas as etapas de desenvolvimento: desde aquele brainstorm inicial até ver o app rodando bonitinho na Play Store. Sempre tento manter o equilíbrio entre funcionalidade e uma experiência legal para o usuário, porque, no final, quem vai usar precisa gostar, né?</p>
+        <p>Além disso, estou sempre aprendendo coisas novas, seja para me atualizar ou para resolver aqueles desafios que aparecem no caminho (e sempre aparecem!). Amo o que faço, e acho incrível poder trabalhar com tecnologia que impacta tanta gente.</p>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Desenvolvimento Mobile</h3>
+            <p>Criação de aplicativos modernos e responsivos</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-code"></i>
+            <h3>Clean Code</h3>
+            <p>Desenvolvimento com boas práticas e código limpo</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-layer-group"></i>
+            <h3>UI/UX Design</h3>
+            <p>Interfaces intuitivas e experiências incríveis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Projetos -->
+  <section id="projetos" class="projetos" data-aos="fade-up">
+    <div class="container">
+      <h2>Meus Projetos</h2>
+      <div class="projetos-grid">
+        <!-- Projeto 1 -->
+        <div class="projeto-card">
+          <h3>Nome do Projeto 1</h3>
+          <p>Descrição do projeto</p>
+          <div class="card-buttons">
+            <a href="https://link-do-seu-demo.com" target="_blank" class="demo-btn">Testar Aplicação</a>
+            <a href="https://github.com/Pdroalencar/projeto1" target="_blank" class="github-btn">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="projeto-card">
+          <h3>Nome do Projeto 2</h3>
+          <p>Descrição do projeto</p>
+          <div class="card-buttons">
+            <a href="https://link-do-seu-demo.com" target="_blank" class="demo-btn">Testar Aplicação</a>
+            <a href="https://github.com/Pdroalencar/projeto2" target="_blank" class="github-btn">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="projeto-card">
+          <h3>Nome do Projeto 3</h3>
+          <p>Descrição do projeto</p>
+          <div class="card-buttons">
+            <a href="https://link-do-seu-demo.com" target="_blank" class="demo-btn">Testar Aplicação</a>
+            <a href="https://github.com/Pdroalencar/projeto3" target="_blank" class="github-btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato" class="contato" data-aos="fade-left">
+    <div class="container">
+      <h2>Entre em Contato</h2>
+      <p>Fique à vontade para entrar em contato comigo preenchendo o formulário abaixo ou pelas redes sociais.</p>
+      <!-- Formulário -->
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+        </div>
+        <div class="form-group">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+      <!-- Redes Sociais -->
+      <div class="social-links">
+        <a href="https://github.com/Pdroalencar" target="_blank" rel="noopener" aria-label="Visit my GitHub profile">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/lucas-dealencar/" target="_blank" rel="noopener" aria-label="Visit my LinkedIn profile">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://www.instagram.com/l_aaalencar/" target="_blank" rel="noopener" aria-label="Visit my Instagram profile">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script para AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
