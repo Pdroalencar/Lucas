@@ -70,7 +70,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         'C-Users-alenc-esports-project',
         'LucasdeAlencar',
         'dasra',
-        'd'
+        'd',
+        'Lucas'
       ];
 
       // Limpar container mantendo apenas o título
