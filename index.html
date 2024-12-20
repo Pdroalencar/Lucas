@@ -14,21 +14,36 @@
 <body>
   <!-- Cabeçalho -->
   <header>
-    <nav>
-      <div class="menu-btn">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="theme-toggle">
-        <i class="fas fa-sun"></i>
-      </div>
-      <ul class="nav-menu">
+    <!-- Menu Desktop -->
+    <nav class="desktop-nav">
+      <ul class="nav-menu-desktop">
         <li><a href="#hero">Home</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#projetos">Projetos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <nav class="mobile-nav">
+      <div class="menu-btn">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <ul class="nav-menu">
+          <li><a href="#hero"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="#sobre"><i class="fas fa-user"></i>Sobre</a></li>
+          <li><a href="#projetos"><i class="fas fa-code"></i>Projetos</a></li>
+          <li><a href="#contato"><i class="fas fa-envelope"></i>Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-overlay"></div>
     </nav>
   </header>
 
@@ -92,8 +107,8 @@
           <h3>Nome do Projeto 1</h3>
           <p>Descrição do projeto</p>
           <div class="card-buttons">
-            <a href="https://link-do-seu-demo.com" target="_blank" class="demo-btn">Testar Aplicação</a>
-            <a href="https://github.com/Pdroalencar/projeto1" target="_blank" class="github-btn">GitHub</a>
+            <a href="https://link-do-seu-demo.com" target="_blank" rel="noopener" class="demo-btn">Testar Aplicação</a>
+            <a href="https://github.com/Pdroalencar/projeto1" target="_blank" rel="noopener" class="github-btn">GitHub</a>
           </div>
         </div>
 
@@ -102,8 +117,8 @@
           <h3>Nome do Projeto 2</h3>
           <p>Descrição do projeto</p>
           <div class="card-buttons">
-            <a href="https://link-do-seu-demo.com" target="_blank" class="demo-btn">Testar Aplicação</a>
-            <a href="https://github.com/Pdroalencar/projeto2" target="_blank" class="github-btn">GitHub</a>
+            <a href="https://link-do-seu-demo.com" target="_blank" rel="noopener" class="demo-btn">Testar Aplicação</a>
+            <a href="https://github.com/Pdroalencar/projeto2" target="_blank" rel="noopener" class="github-btn">GitHub</a>
           </div>
         </div>
 
@@ -112,8 +127,8 @@
           <h3>Nome do Projeto 3</h3>
           <p>Descrição do projeto</p>
           <div class="card-buttons">
-            <a href="https://link-do-seu-demo.com" target="_blank" class="demo-btn">Testar Aplicação</a>
-            <a href="https://github.com/Pdroalencar/projeto3" target="_blank" class="github-btn">GitHub</a>
+            <a href="https://link-do-seu-demo.com" target="_blank" rel="noopener" class="demo-btn">Testar Aplicação</a>
+            <a href="https://github.com/Pdroalencar/projeto3" target="_blank" rel="noopener" class="github-btn">GitHub</a>
           </div>
         </div>
       </div>
