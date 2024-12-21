@@ -1085,21 +1085,179 @@ body.menu-open {
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 40px 20px;
     min-height: 100vh;
+    margin-top: -100px; /* Move o conteúdo para cima */
   }
 
   .hero .container {
     margin: 0;
+    padding: 0 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+    width: 90%; /* Evita que fique muito largo */
   }
 
   .hero .hero-buttons {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Espaçamento entre os botões */
+    gap: 20px;
+    margin-top: 30px;
   }
 
   .hero-image {
-    display: none; /* Remove a imagem */
+    display: none;
+  }
+
+  /* Ajustes de texto */
+  .hero h1 {
+    font-size: 2.5rem;
+    margin: 10px 0;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilos para os botões e ícones sociais */
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.social-icon {
+  color: white;
+  font-size: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+  color: var(--accent-red);
+  transform: translateY(-3px);
+}
+
+/* Versão Desktop */
+@media (min-width: 769px) {
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha à esquerda na versão desktop */
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .social-links {
+    margin-left: 0; /* Remove margem à esquerda */
+    width: fit-content; /* Ajusta a largura ao conteúdo */
+  }
+}
+
+/* Versão Mobile */
+@media (max-width: 768px) {
+  .hero .container {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* Container principal */
+.contato {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Título e texto */
+.contato h2,
+.contato p {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* Email link */
+.email-link {
+  color: var(--accent-red);
+  text-decoration: none;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Formulário */
+.contato-form {
+  width: 100%;
+  max-width: 500px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+/* Botão de enviar */
+.btn-enviar {
+  background: var(--accent-red);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .contato {
+    padding: 40px 20px;
   }
 }
