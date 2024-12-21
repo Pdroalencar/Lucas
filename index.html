@@ -57,6 +57,20 @@
         <a href="#projetos" class="btn">Meus Projetos</a>
         <a href="#contato" class="btn btn-outline">Contato</a>
       </div>
+      <div class="social-links">
+        <a href="https://instagram.com/seu_instagram" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/seu_github" target="_blank" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/seu_linkedin" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://facebook.com/seu_facebook" target="_blank" class="social-icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
     </div>
     <div class="hero-image">
       <img src="sda.jpg" alt="Profile" class="profile-image">
@@ -136,39 +150,29 @@
   </section>
 
   <!-- Seção Contato -->
-  <section id="contato" class="contato" data-aos="fade-left">
-    <div class="container">
-      <h2>Entre em Contato</h2>
-      <p>Fique à vontade para entrar em contato comigo preenchendo o formulário abaixo ou pelas redes sociais.</p>
-      <!-- Formulário -->
-      <form id="contact-form">
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-        </div>
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
-        </div>
-        <div class="form-group">
-          <label for="mensagem">Mensagem</label>
-          <textarea id="mensagem" name="mensagem" rows="5" placeholder="Sua mensagem" required></textarea>
-        </div>
-        <button type="submit" class="btn">Enviar</button>
-      </form>
-      <!-- Redes Sociais -->
-      <div class="social-links">
-        <a href="https://github.com/Pdroalencar" target="_blank" rel="noopener" aria-label="Visit my GitHub profile">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/lucas-dealencar/" target="_blank" rel="noopener" aria-label="Visit my LinkedIn profile">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://www.instagram.com/l_aaalencar/" target="_blank" rel="noopener" aria-label="Visit my Instagram profile">
-          <i class="fab fa-instagram"></i>
-        </a>
+  <section id="contato" class="contato">
+    <h2>Entre em Contato</h2>
+    <p>Fique à vontade para entrar em contato comigo preenchendo o formulário abaixo ou através do e-mail:</p>
+    <a href="mailto:lucasalncar1.dev@gmail.com" class="email-link">lucasalncar1.dev@gmail.com</a>
+    
+    <form class="contato-form">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
       </div>
-    </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
   </section>
 
   <!-- Script para AOS -->
