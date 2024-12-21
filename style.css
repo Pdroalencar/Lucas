@@ -1,1263 +1,182 @@
-/* Reset e variáveis */
-:root {
-  --bg-black: #000000;
-  --card-dark: #161616;
-  --text-white: #ffffff;
-  --accent-red: #ff1f1f;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* Estilos base */
-body {
-  background-color: var(--bg-black);
-  color: var(--text-white);
-  font-family: Arial, sans-serif;
-}
-
-/* Header/Nav */
-header {
-  padding: 2rem;
-  position: fixed;
-  width: 100%;
-  z-index: 100;
-}
-
-.nav-menu {
-  display: flex;
-  justify-content: flex-end;
-  gap: 2rem;
-}
-
-.nav-menu a {
-  color: var(--text-white);
-  text-decoration: none;
-}
-
-/* Hero Section */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 8rem;
-  background-color: var(--bg-black);
-}
-
-/* Conteúdo do Hero */
-.hero .container {
-  flex: 1;
-}
-
-.hero .subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  color: #888;
-}
-
-.hero h1 {
-  font-size: 4rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  letter-spacing: -1px;
-}
-
-.hero .description {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-  color: #aaa;
-}
-
-/* Botões do Hero */
-.hero-buttons {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.hero-buttons .btn {
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  font-weight: 500;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-}
-
-/* Imagem do Hero */
-.hero-image {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.hero-image img {
-  max-width: 400px;
-  border-radius: 10px;
-}
-
-/* Seção Sobre com Cards */
-.sobre-services {
-  background-color: #161616;
-  padding: 4rem 8rem;
-  border-radius: 10px;
-}
-
-.sobre-services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: var(--text-white);
-}
-
-.sobre-services > .container > p {
-  font-size: 1.2rem;
-  color: #888;
-  margin-bottom: 4rem;
-  max-width: 800px;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin-top: 3rem;
-}
-
-.service-card {
-  background-color: #1e1e1e;
-  padding: 2rem;
-  border-radius: 10px;
-  transition: transform 0.3s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-.service-card i {
-  font-size: 2rem;
-  color: var(--accent-red);
-  margin-bottom: 1.5rem;
-}
-
-.service-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  color: var(--text-white);
-}
-
-.service-card p {
-  color: #888;
-  line-height: 1.6;
-}
-
-/* Responsividade */
-@media (max-width: 1200px) {
-  .sobre-services {
-    padding: 4rem 2rem;
-  }
-  
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .sobre-services h2 {
-    font-size: 2rem;
-  }
-}
-
-/* Seções */
-section {
-  padding: 4rem 2rem;
-}
-
-#sobre, #projetos, #contato {
-  background-color: var(--card-dark);
-  margin: 2rem 0;
-  border-radius: 10px;
-}
-
-/* Botões */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.5rem;
-  background-color: var(--accent-red);
-  color: var(--text-white);
-  text-decoration: none;
-  border-radius: 5px;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-/* Container */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* Projeto cards */
-.projeto-card {
-  background-color: var(--card-dark);
-  border-radius: 10px;
-  padding: 2rem;
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 220px;
-  height: 220px;
-  padding: 1.2rem;
-}
-
-.card-content {
-  flex: 1;
-}
-
-.card-buttons {
-  display: flex;
-  gap: 0.5rem;
-  width: 100%;
-  margin-top: 1rem;
-}
-
-.demo-btn, .github-btn {
-  flex: 1;
-  padding: 0.5rem;
-  text-align: center;
-  border-radius: 4px;
-  font-size: 0.8rem;
-  text-decoration: none;
-  color: white;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.3rem;
-  min-width: 80px;
-}
-
-.demo-btn {
-  background-color: var(--accent-red);
-}
-
-.github-btn {
-  background-color: #333;
-}
-
-.demo-btn i, .github-btn i {
-  font-size: 0.9rem;
-  margin-right: 4px;
-}
-
-.demo-btn:hover, .github-btn:hover {
-  transform: translateY(-2px);
-  opacity: 0.9;
-}
-
-/* Skills/tecnologias */
-.tech-stack {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 1rem;
-  margin: 2rem 0;
-}
-
-.tech-tag {
-  background-color: var(--card-dark);
-  padding: 1rem;
-  border-radius: 5px;
-  text-align: center;
-}
-
-/* Formulário de contato */
-form {
-  background-color: var(--card-dark);
-  padding: 2rem;
-  border-radius: 10px;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: var(--bg-black);
-  border: 1px solid #333;
-  border-radius: 5px;
-  color: var(--text-white);
-}
-
-/* Responsividade */
-@media (max-width: 968px) {
-  .hero {
-    padding: 0 2rem;
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .hero-buttons {
-    justify-content: center;
-  }
-
-  .hero h1 {
-    font-size: 3rem;
-  }
-
-  .hero-image {
-    margin-top: 2rem;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 1200px) {
-  .services-grid {
-    padding: 4rem 2rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Estilo para os links sociais */
-.social-links {
-  display: flex;
-  gap: 2rem;
-  margin-top: 2rem;
-  justify-content: center;
-}
-
-.social-links a {
-  color: var(--text-white);
-  font-size: 2rem;
-  transition: all 0.3s ease;
-}
-
-.social-links a:hover {
-  color: var(--accent-red);
-  transform: translateY(-3px);
-}
-
-/* Cores específicas para cada rede social no hover */
-.social-links a:hover .fa-github {
-  color: #333;
-}
-
-.social-links a:hover .fa-linkedin {
-  color: #0077b5;
-}
-
-.social-links a:hover .fa-instagram {
-  color: #e4405f;
-}
-
-/* Container da seção sobre */
-.sobre-container {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 4rem;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* Seção da foto */
-.profile-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.about-image {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-/* Seção de skills */
-.skills-section {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-/* Grid de serviços */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-/* Cards menores */
-.service-card {
-  background-color: #161616;
-  padding: 1.5rem;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.service-card i {
-  font-size: 1.5rem;
-  color: var(--accent-red);
-  margin-bottom: 1rem;
-}
-
-.service-card h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-.service-card p {
-  font-size: 0.9rem;
-  color: #888;
-}
-
-/* Responsividade */
-@media (max-width: 1024px) {
-  .sobre-container {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .profile-section {
-    order: -1;
-  }
-
-  .about-image {
-    max-width: 300px;
-  }
-
-  .services-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Seção de Projetos */
-#projetos {
-  padding: 4rem 2rem;
-}
-
-#projetos h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.projetos-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  padding: 1rem;
-  margin: 0 auto;
-  max-width: 100%;
-}
-
-.projeto-card {
-  flex: 1 1 220px;
-  background-color: #1a1a1a;
-  padding: 1.5rem;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  min-width: 220px;
-}
-
-.projeto-card:hover {
-  transform: translateY(-5px);
-  background-color: #222;
-}
-
-.projeto-card i {
-  font-size: 1.2rem;
-  color: var(--accent-red);
-  margin-bottom: 0.5rem;
-}
-
-.projeto-card h3 {
-  font-size: 1rem;
-  color: var(--text-white);
-  margin-bottom: 0.3rem;
-}
-
-.projeto-card p {
-  font-size: 0.8rem;
-  color: #888;
-  line-height: 1.4;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  line-clamp: 3;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .projetos-grid {
-    gap: 1rem;
-  }
-  
-  .projeto-card {
-    width: 180px;
-    height: 180px;
-  }
-}
-
-@media (max-width: 480px) {
-  .projetos-grid {
-    justify-content: center;
-  }
-  
-  .projeto-card {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-/* Estilização da barra de rolagem */
-.projetos-grid::-webkit-scrollbar {
-  height: 6px;
-}
-
-.projetos-grid::-webkit-scrollbar-track {
-  background: #1a1a1a;
-}
-
-.projetos-grid::-webkit-scrollbar-thumb {
-  background: #333;
-  border-radius: 3px;
-}
-
-/* Estilos base para mobile-first */
-.container {
-  width: 90%;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Menu mobile */
-.menu-btn {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  /* Header/Nav */
-  .menu-btn {
-    display: block;
-    cursor: pointer;
-    position: relative;
-    z-index: 1000;
-  }
-
-  .nav-menu {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100vh;
-    background: var(--bg-color);
-    flex-direction: column;
-    padding-top: 80px;
-    transition: 0.3s;
-  }
-
-  .nav-menu.active {
-    left: 0;
-  }
-
-  /* Hero Section */
-  .hero {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 0;
-  }
-
-  .hero-image {
-    margin-top: 30px;
-  }
-
-  .profile-image {
-    width: 200px;
-    height: 200px;
-  }
-
-  /* Sobre Section */
-  .sobre-container {
-    flex-direction: column;
-    padding: 40px 20px;
-  }
-
-  .profile-section {
-    margin-bottom: 30px;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  /* Projetos Section */
-  .projetos-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  /* Contato Section */
-  .form-group {
-    margin-bottom: 20px;
-  }
-
-  .social-links {
-    margin-top: 30px;
-  }
-}
-
-/* Estilos do Menu Mobile */
-.menu-btn {
-  display: none;
-  cursor: pointer;
-  z-index: 1000;
-}
-
-.hamburger {
-  width: 30px;
-  height: 20px;
-  position: relative;
-}
-
-.hamburger span {
-  display: block;
-  width: 100%;
-  height: 2px;
-  background: var(--text-white);
-  position: absolute;
-  transition: .3s ease;
-}
-
-.hamburger span:nth-child(1) { top: 0; }
-.hamburger span:nth-child(2) { top: 9px; }
-.hamburger span:nth-child(3) { top: 18px; }
-
-/* Menu ativo */
-.menu-btn.active .hamburger span:nth-child(1) {
-  transform: rotate(45deg) translate(6px, 6px);
-}
-
-.menu-btn.active .hamburger span:nth-child(2) {
-  opacity: 0;
-}
-
-.menu-btn.active .hamburger span:nth-child(3) {
-  transform: rotate(-45deg) translate(8px, -8px);
-}
-
-/* Sidebar */
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: -280px;
-  height: 100vh;
-  width: 280px;
-  background-color: var(--accent-red);
-  z-index: 999;
-  transition: .3s ease;
-  padding: 20px;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-.sidebar.active {
-  left: 0;
-  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
-}
-
-.sidebar-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.sidebar-profile {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
-
-.sidebar .nav-menu {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar .nav-menu li {
-  margin-bottom: 15px;
-}
-
-.sidebar .nav-menu a {
-  color: var(--text-white);
-  text-decoration: none;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-  border-radius: 8px;
-  transition: .3s ease;
-}
-
-.sidebar .nav-menu a i {
-  margin-right: 10px;
-  width: 20px;
-}
-
-.sidebar .nav-menu a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-/* Overlay */
-.sidebar-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 998;
-  opacity: 0;
-  visibility: hidden;
-  transition: .3s ease;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.sidebar-overlay.active {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-  }
-}
-
-body.menu-open {
-  overflow: hidden;
-}
-
-/* Menu Desktop */
-.desktop-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px 0;
-  background-color: var(--accent-red);
-  z-index: 100;
-  border-radius: 0;
-}
-
-.nav-menu-desktop {
-  display: flex;
-  gap: 50px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-menu-desktop a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: 0.3s ease;
-}
-
-.nav-menu-desktop a:hover {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-/* Menu Mobile */
-.mobile-nav {
-  display: none;
-}
-
-.menu-btn {
-  display: none;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-  .desktop-nav {
-    display: none;
-  }
-
-  .mobile-nav {
-    display: block;
-  }
-
-  .menu-btn {
-    display: block;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1000;
-  }
-
-  /* ... resto dos estilos mobile ... */
-}
-
-/* ... resto do seu CSS ... */
-
-/* Menu Mobile */
-.mobile-nav .sidebar {
-  position: fixed;
-  top: 0;
-  left: -280px;
-  height: 100vh;
-  width: 280px;
-  background-color: var(--accent-red) !important;
-  z-index: 999;
-  transition: .3s ease;
-  padding: 20px;
-  overflow-y: auto;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
-}
-
-/* Ajustes para os itens dentro do menu lateral */
-.sidebar .nav-menu a {
-  color: white;
-  background-color: transparent;
-}
-
-.sidebar .nav-menu a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-.sidebar-header h3 {
-  color: white;
-  margin-top: 10px;
-}
-
-/* Se quiser um tom específico de rosa, pode usar um destes: */
-/* background-color: #FF1493 !important; // Rosa escuro */
-/* background-color: #FF69B4 !important; // Rosa mais claro */
-/* background-color: #FF007F !important; // Rosa vibrante */
-
-/* Reset completo do menu mobile */
-.mobile-nav {
-  display: none;
-}
-
-@media (max-width: 768px) {
-  .mobile-nav {
-    display: block;
-  }
-
-  .menu-btn {
-    display: block;
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1001;
-    cursor: pointer;
-  }
-
-  /* Menu Lateral */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -280px;
-    width: 280px;
-    height: 100%;
-    background: #FF1F1F !important;
-    z-index: 1000;
-    transition: 0.3s;
-    padding: 20px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Conteúdo do Menu */
-  .sidebar-header {
-    text-align: center;
-    padding: 20px 0;
-    order: 2;
-  }
-
-  .nav-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    order: 1;
-  }
-
-  .nav-menu li {
-    margin: 5px 0;
-  }
-
-  .nav-menu a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    padding: 15px;
-    border-radius: 5px;
-    transition: 0.3s;
-  }
-
-  .nav-menu a i {
-    margin-right: 10px;
-    width: 20px;
-    text-align: center;
-  }
-
-  .nav-menu a:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  /* Overlay */
-  .sidebar-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    z-index: 999;
-    display: none;
-  }
-
-  .sidebar-overlay.active {
-    display: block;
-  }
-}
-
-/* Menu Mobile Styles */
-@media (max-width: 768px) {
-  .mobile-nav {
-    display: block;
-  }
-
-  /* Botão do Menu */
-  .menu-btn {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    z-index: 1001;
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hamburger {
-    width: 100%;
-  }
-
-  .hamburger span {
-    display: block;
-    width: 100%;
-    height: 2px;
-    background: white;
-    margin: 6px 0;
-    transition: 0.3s;
-  }
-
-  /* Menu Lateral */
-  .sidebar {
-    position: fixed;
-    top: 0;
-    left: -100%;
-    width: 250px;
-    height: 100vh;
-    background: linear-gradient(135deg, #FF1F1F, #FF69B4); /* Gradiente */
-    padding: 80px 20px 20px;
-    transition: 0.3s ease-in-out;
-    z-index: 1000;
-    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
-  }
-
-  .sidebar.active {
-    left: 0;
-  }
-
-  /* Links do Menu */
-  .nav-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-menu li {
-    margin-bottom: 15px;
-  }
-
-  .nav-menu a {
-    display: flex;
-    align-items: center;
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 12px 15px;
-    border-radius: 8px;
-    transition: 0.2s;
-  }
-
-  .nav-menu a i {
-    margin-right: 12px;
-    width: 20px;
-    text-align: center;
-  }
-
-  .nav-menu a:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  /* Overlay */
-  .sidebar-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-    opacity: 0;
-    visibility: hidden;
-    transition: 0.3s;
-  }
-
-  .sidebar-overlay.active {
-    opacity: 1;
-    visibility: visible;
-  }
-
-  /* Animação do botão hamburger */
-  .menu-btn.active .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-
-  .menu-btn.active .hamburger span:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-btn.active .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-  }
-}
-
-/* Estilos para a seção Hero na versão mobile */
-@media (max-width: 768px) {
-  .hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: 100vh;
-    margin-top: -100px; /* Move o conteúdo para cima */
-  }
-
-  .hero .container {
-    margin: 0;
-    padding: 0 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza perfeitamente */
-    width: 90%; /* Evita que fique muito largo */
-  }
-
-  .hero .hero-buttons {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-top: 30px;
-  }
-
-  .hero-image {
-    display: none;
-  }
-
-  /* Ajustes de texto */
-  .hero h1 {
-    font-size: 2.5rem;
-    margin: 10px 0;
-  }
-
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-  }
-}
-
-/* Estilos para os botões e ícones sociais */
-.hero-buttons {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 30px;
-}
-
-.social-links {
-  display: flex;
-  gap: 25px;
-  margin-top: 30px;
-}
-
-.social-icon {
-  color: white;
-  font-size: 24px;
-  transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-  color: var(--accent-red);
-  transform: translateY(-3px);
-}
-
-/* Versão Desktop */
-@media (min-width: 769px) {
-  .hero .container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinha à esquerda na versão desktop */
-  }
-
-  .hero-buttons {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-  }
-
-  .social-links {
-    margin-left: 0; /* Remove margem à esquerda */
-    width: fit-content; /* Ajusta a largura ao conteúdo */
-  }
-}
-
-/* Versão Mobile */
-@media (max-width: 768px) {
-  .hero .container {
-    text-align: center;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .social-links {
-    justify-content: center;
-  }
-}
-
-/* Container principal */
-.contato {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 80px 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-/* Título e texto */
-.contato h2,
-.contato p {
-  text-align: center;
-  width: 100%;
-  margin-bottom: 20px;
-}
-
-/* Email link */
-.email-link {
-  color: var(--accent-red);
-  text-decoration: none;
-  margin-bottom: 40px;
-  text-align: center;
-  width: 100%;
-}
-
-/* Formulário */
-.contato-form {
-  width: 100%;
-  max-width: 500px;
-}
-
-.form-group {
-  margin-bottom: 20px;
-  width: 100%;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
-}
-
-.form-group textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-/* Botão de enviar */
-.btn-enviar {
-  background: var(--accent-red);
-  color: white;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
-/* Responsivo */
-@media (max-width: 768px) {
-  .contato {
-    padding: 40px 20px;
-  }
-}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Lucas Alencar</title>
+  <!-- Link para AOS (Animate On Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <!-- Link para o CSS -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Link para Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <!-- Cabeçalho -->
+  <header>
+    <!-- Menu Desktop -->
+    <nav class="desktop-nav">
+      <ul class="nav-menu-desktop">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <!-- Menu Mobile -->
+    <nav class="mobile-nav">
+      <div class="menu-btn">
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="sidebar">
+        <ul class="nav-menu">
+          <li><a href="#hero"><i class="fas fa-home"></i>Home</a></li>
+          <li><a href="#sobre"><i class="fas fa-user"></i>Sobre</a></li>
+          <li><a href="#projetos"><i class="fas fa-code"></i>Projetos</a></li>
+          <li><a href="#contato"><i class="fas fa-envelope"></i>Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-overlay"></div>
+    </nav>
+  </header>
+
+  <!-- Seção Hero atualizada -->
+  <section id="hero" class="hero">
+    <div class="container">
+      <p class="subtitle">Hello, My Name Is</p>
+      <h1>Lucas Alencar</h1>
+      <p class="description">Desenvolvedor mobile</p>
+      <div class="hero-buttons">
+        <a href="#projetos" class="btn">Meus Projetos</a>
+        <a href="#contato" class="btn btn-outline">Contato</a>
+      </div>
+      <div class="social-links">
+        <a href="https://instagram.com/seu_instagram" target="_blank" class="social-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://github.com/seu_github" target="_blank" class="social-icon">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/seu_linkedin" target="_blank" class="social-icon">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://facebook.com/seu_facebook" target="_blank" class="social-icon">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="sda.jpg" alt="Profile" class="profile-image">
+    </div>
+  </section>
+
+  <!-- Seção Sobre com Cards de Serviços -->
+  <section id="sobre" class="sobre-services">
+    <div class="sobre-container">
+      <div class="profile-section">
+        <img src="sda.jpg" alt="Minha foto" class="about-image">
+      </div>
+      
+      <div class="skills-section">
+        <h2>Sobre Mim</h2>
+        <p>Oi, eu sou desenvolvedor mobile e trabalho com Java, especialmente criando apps para Android. Gosto de transformar ideias em aplicativos que as pessoas realmente usam no dia a dia. É muito gratificante saber que algo que eu criei pode facilitar a vida de alguém ou até mesmo trazer diversão.</p>
+        <p>Tenho experiência em todas as etapas de desenvolvimento: desde aquele brainstorm inicial até ver o app rodando bonitinho na Play Store. Sempre tento manter o equilíbrio entre funcionalidade e uma experiência legal para o usuário, porque, no final, quem vai usar precisa gostar, né?</p>
+        <p>Além disso, estou sempre aprendendo coisas novas, seja para me atualizar ou para resolver aqueles desafios que aparecem no caminho (e sempre aparecem!). Amo o que faço, e acho incrível poder trabalhar com tecnologia que impacta tanta gente.</p>
+        
+        <div class="services-grid">
+          <div class="service-card">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Desenvolvimento Mobile</h3>
+            <p>Criação de aplicativos modernos e responsivos</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-code"></i>
+            <h3>Clean Code</h3>
+            <p>Desenvolvimento com boas práticas e código limpo</p>
+          </div>
+          <div class="service-card">
+            <i class="fas fa-layer-group"></i>
+            <h3>UI/UX Design</h3>
+            <p>Interfaces intuitivas e experiências incríveis</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Projetos -->
+  <section id="projetos" class="projetos" data-aos="fade-up">
+    <div class="container">
+      <h2>Meus Projetos</h2>
+      <div class="projetos-grid">
+        <!-- Projeto 1 -->
+        <div class="projeto-card">
+          <h3>Nome do Projeto 1</h3>
+          <p>Descrição do projeto</p>
+          <div class="card-buttons">
+            <a href="https://link-do-seu-demo.com" target="_blank" rel="noopener" class="demo-btn">Testar Aplicação</a>
+            <a href="https://github.com/Pdroalencar/projeto1" target="_blank" rel="noopener" class="github-btn">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Projeto 2 -->
+        <div class="projeto-card">
+          <h3>Nome do Projeto 2</h3>
+          <p>Descrição do projeto</p>
+          <div class="card-buttons">
+            <a href="https://link-do-seu-demo.com" target="_blank" rel="noopener" class="demo-btn">Testar Aplicação</a>
+            <a href="https://github.com/Pdroalencar/projeto2" target="_blank" rel="noopener" class="github-btn">GitHub</a>
+          </div>
+        </div>
+
+        <!-- Projeto 3 -->
+        <div class="projeto-card">
+          <h3>Nome do Projeto 3</h3>
+          <p>Descrição do projeto</p>
+          <div class="card-buttons">
+            <a href="https://link-do-seu-demo.com" target="_blank" rel="noopener" class="demo-btn">Testar Aplicação</a>
+            <a href="https://github.com/Pdroalencar/projeto3" target="_blank" rel="noopener" class="github-btn">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção Contato -->
+  <section id="contato" class="contato">
+    <h2>Entre em Contato</h2>
+    <p>Fique à vontade para entrar em contato comigo preenchendo o formulário abaixo ou através do e-mail:</p>
+    <a href="mailto:lucasalncar1.dev@gmail.com" class="email-link">lucasalncar1.dev@gmail.com</a>
+    
+    <form class="contato-form">
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+      </div>
+
+      <div class="form-group">
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" required></textarea>
+      </div>
+
+      <button type="submit" class="btn-enviar">Enviar</button>
+    </form>
+  </section>
+
+  <!-- Script para AOS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
